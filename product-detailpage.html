@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Spot - Product Details</title>
+  <link rel="stylesheet" href="prd-dts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="#/" class="logo">
+        <div class="logo-text">
+          <span>WHITE</span><span class="yellow"> SPOT</span>
+        </div>
+      </a>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search for Products, Brands and More" id="search-input">
+        <button type="button" class="search-button" onclick="handleSearch()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="header-nav">
+        <a href="#/login" class="login-button">Login</a>
+        <a href="./index.html" class="nav-link">
+          <i class="ri-home-3-line"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="#/cart" class="nav-link">
+          <i class="ri-shopping-cart-line"></i>
+          <span>Cart</span>
+        </a>
+          <a href="./shop.html" class="nav-link">
+          <i class="ri-shopping-bag-line"></i>
+          <span>Shop</span>
+        </a>
+        
+      </nav>
+    </div>
+    <div class="mobile-search">
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." id="mobile-search-input">
+        <button type="button" class="search-button" onclick="handleSearch()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav class="category-nav">
+    <div class="container">
+      <ul class="category-list" id="category-list">
+        <li class="category-item"><a href="#/category/kilos" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="Kilos" class="category-icon"><span>Kilos</span></a></li>
+        <li class="category-item"><a href="#/category/mobiles" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/22fddf3c7da4c4f4.png?q=100" alt="Mobiles" class="category-icon"><span>Mobiles</span></a></li>
+        <li class="category-item"><a href="#/category/fashion" class="category-link"><img src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/0d75b34f7d8fbcb3.png?q=100" alt="Fashion" class="category-icon"><span>Fashion</span></a></li>
+        <li class="category-item"><a href="#/category/electronics" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/69c6589653afdb9a.png?q=100" alt="Electronics" class="category-icon"><span>Electronics</span></a></li>
+        <li class="category-item"><a href="#/category/home" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/ab7e2b022a4587dd.jpg?q=100" alt="Home & Furniture" class="category-icon"><span>Home & Furniture</span></a></li>
+        <li class="category-item"><a href="#/category/appliances" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/0ff199d1bd27eb98.png?q=100" alt="Appliances" class="category-icon"><span>Appliances</span></a></li>
+        <li class="category-item"><a href="#/category/travel" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/71050627a56b4693.png?q=100" alt="Travel" class="category-icon"><span>Travel</span></a></li>
+        <li class="category-item"><a href="#/category/beauty-toys" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/dff3f7adcf3a90c6.png?q=100" alt="Beauty, Toys & More" class="category-icon"><span>Beauty, Toys & More</span></a></li>
+        <li class="category-item"><a href="#/category/two-wheelers" class="category-link"><img src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/05d708653beff580.png?q=100" alt="Two Wheelers" class="category-icon"><span>Two Wheelers</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-content">
+    <main class="main-container">
+      <nav class="breadcrumb container">
+        <a href="#/">Home</a> > <a href="#/category/men">Men</a> > <a href="#/category/shoes">Shoes</a> > <span>Nike Air</span>
+      </nav>
+      <section class="product-details container">
+        <div class="product-images">
+          <img src="https://picsum.photos/seed/product1/600/600" alt="Nike Air Shoe" class="main-image" id="mainImage">
+          <div class="thumbnails">
+            <img src="https://picsum.photos/seed/product1/600/600" alt="Image 1" class="thumbnail active" onclick="changeImage('https://picsum.photos/seed/product1/600/600')">
+            <img src="https://picsum.photos/seed/product2/600/600" alt="Image 2" class="thumbnail" onclick="changeImage('https://picsum.photos/seed/product2/600/600')">
+            <img src="https://picsum.photos/seed/product3/600/600" alt="Image 3" class="thumbnail" onclick="changeImage('https://picsum.photos/seed/product3/600/600')">
+          </div>
+        </div>
+        <article class="product-info">
+          <h1 class="product-title">Nike Air Max 90</h1>
+          <p class="product-brand">Brand: Nike</p>
+          <div class="rating">
+            <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <span class="reviews">(4.5 / 128 reviews)</span>
+          </div>
+          <p class="price">₹8,999</p>
+          <p class="stock">In Stock</p>
+          <div class="quantity">
+            <button class="quantity-btn" onclick="updateQuantity(-1)">-</button>
+            <input type="number" class="quantity-value" id="quantity" value="1" min="1" readonly>
+            <button class="quantity-btn" onclick="updateQuantity(1)">+</button>
+          </div>
+          <div class="options">
+            <label>Size:</label>
+            <select>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <label>Color:</label>
+            <select>
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="red">Red</option>
+            </select>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+            <button class="btn btn-secondary" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            <button class="favorite" id="favoriteBtn" onclick="toggleFavorite()">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+          <div class="description">
+            <p>Experience ultimate comfort with the Nike Air Max 90, featuring a sleek design and responsive cushioning.</p>
+            <button class="more-details-btn" onclick="toggleDetails()">More Details</button>
+            <div class="more-details" id="moreDetails">
+              <p>Constructed with premium materials, this shoe offers durability and style. Ideal for casual wear and light running.</p>
+            </div>
+          </div>
+          <div class="tabs">
+            <button class="tab active" onclick="openTab('description')">Description</button>
+            <button class="tab" onclick="openTab('reviews')">Reviews</button>
+            <button class="tab" onclick="openTab('shipping')">Shipping Info</button>
+          </div>
+          <div id="description-tab" class="tab-content active">
+            <p>Premium leather upper with breathable mesh. Air-Sole unit for cushioning. Rubber outsole for traction.</p>
+          </div>
+          <div id="reviews-tab" class="tab-content">
+            <p><i class="fas fa-quote-left"></i> Great shoes, very comfortable! <i class="fas fa-quote-right"></i> - John D.</p>
+            <p><i class="fas fa-quote-left"></i> Fast delivery, highly recommend! <i class="fas fa-quote-right"></i> - Sarah K.</p>
+          </div>
+          <div id="shipping-tab" class="tab-content">
+            <p>Free shipping on orders above ₹1,000. Delivery within 3-5 days.</p>
+          </div>
+        </article>
+      </section>
+      <section class="related-products container">
+        <h2 class="section-title">Related Products</h2>
+        <div class="related-product-card">
+          <img src="https://picsum.photos/seed/related1/150/150" alt="Related Product 1" class="related-product-img">
+          <p>Adidas Ultraboost</p>
+          <p>₹7,499</p>
+        </div>
+        <div class="related-product-card">
+          <img src="https://picsum.photos/seed/related2/150/150" alt="Related Product 2" class="related-product-img">
+          <p>Puma RS-X</p>
+          <p>₹6,999</p>
+        </div>
+        <div class="related-product-card">
+          <img src="https://picsum.photos/seed/related3/150/150" alt="Related Product 3" class="related-product-img">
+          <p>Reebok Nano</p>
+          <p>₹5,499</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="sticky-bar">
+    <button class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+    <button class="btn btn-secondary" onclick="proceedToCheckout()">Proceed to Checkout</button>
+  </div>
+  <div class="modal" id="imageModal">
+    <span class="close-modal" onclick="closeModal()">×</span>
+    <img src="" alt="Full Screen Image" class="modal-img" id="modalImage">
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h5>ABOUT</h5>
+          <ul>
+            <li><a href="#/about/contact">Contact Us</a></li>
+            <li><a href="#/about/us">About Us</a></li>
+            <li><a href="#/about/careers">Careers</a></li>
+            <li><a href="#/about/stories">Flipkart Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>HELP</h5>
+          <ul>
+            <li><a href="#/help/payments">Payments</a></li>
+            <li><a href="#/help/shipping">Shipping</a></li>
+            <li><a href="#/help/faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>POLICY</h5>
+          <ul>
+            <li><a href="#/policy/return">Return Policy</a></li>
+            <li><a href="#/policy/terms">Terms Of Use</a></li>
+            <li><a href="#/policy/security">Security</a></li>
+            <li><a href="#/policy/privacy">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>SOCIAL</h5>
+          <ul>
+            <li><a href="#/social/facebook">Facebook</a></li>
+            <li><a href="#/social/twitter">Twitter</a></li>
+            <li><a href="#/social/youtube">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2023 White Spot. All rights reserved.</p>
+        <p>This is a conceptual UI clone for demonstration purposes.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="prd-dts.js"> </script>
+</body>
+</html>

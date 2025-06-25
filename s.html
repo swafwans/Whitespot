@@ -1,0 +1,140 @@
+```html
+<!-- File: views/admin.html -->
+
+```
+
+```css
+/* File: public/css/admin.css */
+
+
+```javascript
+// File: public/js/admin.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Sidebar navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Image preview
+    const productImage = document.getElementById('productImage');
+    const imagePreview = document.getElementById('imagePreview');
+
+    productImage.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                imagePreview.src = e.target.result;
+                imagePreview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Form submission
+    const productForm = document.getElementById('productForm');
+    productForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData();
+        formData.append('name', document.getElementById('productName').value);
+        formData.append('description', document.getElementById('productDescription').value);
+        if (productImage.files[0]) {
+            formData.append('image', productImage.files[0]);
+        }
+
+        // Log form data for now
+        for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+        }
+
+        try {
+            const response = await fetch('/api/products', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            console.log('Product saved:', data);
+            alert('Product saved successfully!');
+        } catch (error) {
+            console.error('Error saving product:', error);
+            alert('Error saving product');
+        }
+    });
+
+    // Sidebar toggle for mobile
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'sidebar-toggle btn btn-dark';
+    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    document.body.appendChild(toggleBtn);
+
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+    });
+});
+```
+
+```json
+// File: package.json
+{
+  "name": "ecommerce-backend",
+  "version": "1.0.0",
+  "description": "Backend for White Spot e-commerce",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
+```
+
+```javascript
+// File: server.js
+const express = require('express');
+const connectDB = require('./config/db');
+const productRoutes = require('./routes/products');
+const adminRoutes = require('./routes/admin');
+const multer = require('multer');
+const path = require('path');
+
+const app = express();
+
+// Connect to MongoDB
+connectDB();
+
+// Middleware
+app.use(express.json());
+app.use(express.static('public'));
+
+// Multer storage configuration
+const storage = multer.diskStorage({
+  destination: './public/images',
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname));
+  }
+});
+const upload = multer({ storage });
+
+// Routes
+app.use('/api/products', productRoutes);
+app.use('/admin', adminRoutes);
+
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+```
