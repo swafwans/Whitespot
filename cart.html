@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Spot-Cart</title>
+  <link rel="stylesheet" href="cart.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-text">
+          <span>WHITE</span><span class="yellow"> SPOT</span>
+        </div>
+      </a>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search for Products, Brands and More" id="search-input">
+        <button type="button" class="search-button" onclick="handleSearch()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="header-nav">
+        <a href="#/login" class="login-button">Login</a>
+        <a href="./index.html" class="nav-link">
+          <i class="ri-home-3-line"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="cart.html" class="nav-link">
+          <i class="ri-shopping-cart-line"></i>
+          <span>Cart</span>
+        </a>
+          <a href="./shop.html" class="nav-link">
+          <i class="ri-shopping-bag-line"></i>
+          <span>Shop</span>
+        </a>
+        
+      </nav>
+    </div>
+    <div class="mobile-search">
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." id="mobile-search-input">
+        <button type="button" class="search-button" onclick="handleSearch()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="main-content">
+    <div class="container cart-container">
+      <h2>Your Cart</h2>
+      <table class="cart-table" id="cartTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="https://picsum.photos/seed/cart1/80/80" alt="LNEWELL Sofa"> LNEWELL Premium Quality Moitno 3 Seater Sofa</td>
+            <td>₹7,728</td>
+            <td>1</td>
+            <td>₹7,728</td>
+            <td><button class="remove-btn" onclick="removeItem(this)">Remove</button></td>
+          </tr>
+          <tr>
+            <td><img src="https://picsum.photos/seed/cart2/80/80" alt="Wakefit Sofa"> Wakefit Solarino Fabric 3 Seater Sofa</td>
+            <td>₹7,999</td>
+            <td>2</td>
+            <td>₹15,998</td>
+            <td><button class="remove-btn" onclick="removeItem(this)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cart-summary">
+        <div>
+          <p>Subtotal</p>
+          <p>Shipping</p>
+          <p class="total">Total: ₹23,726</p>
+          <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h5>ABOUT</h5>
+          <ul>
+            <li><a href="#/about/contact">Contact Us</a></li>
+            <li><a href="#/about/us">About Us</a></li>
+            <li><a href="#/about/careers">Careers</a></li>
+            <li><a href="#/about/stories">Flipkart Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>HELP</h5>
+          <ul>
+            <li><a href="#/help/payments">Payments</a></li>
+            <li><a href="#/help/shipping">Shipping</a></li>
+            <li><a href="#/help/faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>POLICY</h5>
+          <ul>
+            <li><a href="#/policy/return">Return Policy</a></li>
+            <li><a href="#/policy/terms">Terms Of Use</a></li>
+            <li><a href="#/policy/security">Security</a></li>
+            <li><a href="#/policy/privacy">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>SOCIAL</h5>
+          <ul>
+            <li><a href="#/social/facebook">Facebook</a></li>
+            <li><a href="#/social/twitter">Twitter</a></li>
+            <li><a href="#/social/youtube">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2023 White Spot. All rights reserved.</p>
+        <p>This is a conceptual UI clone for demonstration purposes.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="cart.js"> </script>
+</body>
+</html>

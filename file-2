@@ -1,0 +1,8 @@
+white-spot-admin/
+├── public/
+│   ├── admin.html
+│   ├── admin.css
+│   └── admin.js
+├── server.js
+├── package.json
+└── node_modules/  (npm install ചെയ്ത ശേഷം സൃഷ്ടിക്കപ്പെടും)

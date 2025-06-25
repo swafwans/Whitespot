@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Spot</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="#/" class="logo">
+        <div class="logo-text">
+          <span>WHITE</span><span class="yellow"> SPOT</span>
+        </div>
+      </a>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search for Products, Brands and More" id="search-input">
+        <button type="button" class="search-button" onclick="handleSearch()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="header-nav">
+        <a href="#/login" class="login-button">Login</a>
+        <a href="./index.html" class="nav-link">
+          <i class="ri-home-3-line"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="cart.html" class="nav-link">
+          <i class="ri-shopping-cart-line"></i>
+          <span>Cart</span>
+        </a>
+          <a href="./shop.html" class="nav-link">
+          <i class="ri-shopping-bag-line"></i>
+          <span>Shop</span>
+        </a>
+        
+      </nav>
+    </div>
+    <div class="mobile-search">
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." id="mobile-search-input">
+        <button type="button" class="search-button" onclick="handleSearch()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav class="category-nav">
+    <div class="container">
+      <ul class="category-list" id="category-list">
+        <li class="category-item"><a href="#/category/kilos" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/29327f40e9c4d26b.png?q=100" alt="Kilos" class="category-icon"><span>Kilos</span></a></li>
+        <li class="category-item"><a href="#/category/mobiles" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/22fddf3c7da4c4f4.png?q=100" alt="Mobiles" class="category-icon"><span>Mobiles</span></a></li>
+        <li class="category-item"><a href="#/category/fashion" class="category-link"><img src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/0d75b34f7d8fbcb3.png?q=100" alt="Fashion" class="category-icon"><span>Fashion</span></a></li>
+        <li class="category-item"><a href="#/category/electronics" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/69c6589653afdb9a.png?q=100" alt="Electronics" class="category-icon"><span>Electronics</span></a></li>
+        <li class="category-item"><a href="#/category/home" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/ab7e2b022a4587dd.jpg?q=100" alt="Home & Furniture" class="category-icon"><span>Home & Furniture</span></a></li>
+        <li class="category-item"><a href="#/category/appliances" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/0ff199d1bd27eb98.png?q=100" alt="Appliances" class="category-icon"><span>Appliances</span></a></li>
+        <li class="category-item"><a href="#/category/travel" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/71050627a56b4693.png?q=100" alt="Travel" class="category-icon"><span>Travel</span></a></li>
+        <li class="category-item"><a href="#/category/beauty-toys" class="category-link"><img src="https://rukminim1.flixcart.com/flap/80/80/image/dff3f7adcf3a90c6.png?q=100" alt="Beauty, Toys & More" class="category-icon"><span>Beauty, Toys & More</span></a></li>
+        <li class="category-item"><a href="#/category/two-wheelers" class="category-link"><img src="https://rukminim1.flixcart.com/fk-p-flap/80/80/image/05d708653beff580.png?q=100" alt="Two Wheelers" class="category-icon"><span>Two Wheelers</span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-content">
+    <main class="main-container">
+      <div class="banner">
+        <img src="https://picsum.photos/seed/mainbanner/1280/300" alt="Main Promotional Banner" class="banner-img">
+      </div>
+      <section class="section" id="electronics-section">
+        <div class="section-header">
+          <h2 class="section-title">Best of Electronics</h2>
+        </div>
+        <div class="product-slider">
+          <button class="slider-button left" onclick="scrollSlider('electronics-list', -300)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="product-list" id="electronics-list">
+            <div class="product-card">
+              <a href="/productdetailpage/p1" class="product-link">
+                <img src="https://picsum.photos/seed/tw1/200/200" alt="Best Truewireless Headphones" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Best Truewireless Headphones">Best Truewireless Headphones</h3>
+                  <p class="product-offer">Grab Now</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p2" class="product-link">
+                <img src="https://picsum.photos/seed/ms1/200/200" alt="Best Selling Mobile Speakers" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Best Selling Mobile Speakers">Best Selling Mobile Speakers</h3>
+                  <p class="product-offer">From ₹499*</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p3" class="product-link">
+                <img src="https://picsum.photos/seed/mon1/200/200" alt="ASUS Monitors" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="ASUS Monitors">ASUS Monitors</h3>
+                  <p class="product-offer">From ₹14999</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p4" class="product-link">
+                <img src="https://picsum.photos/seed/sw1/200/200" alt="Noise Smartwatches" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Noise Smartwatches">Noise Smartwatches</h3>
+                  <p class="product-offer">From ₹1,099</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p5" class="product-link">
+                <img src="https://picsum.photos/seed/proj1/200/200" alt="Projector" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Projector">Projector</h3>
+                  <p class="product-offer">From ₹6990</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p6" class="product-link">
+                <img src="https://picsum.photos/seed/lap1/200/200" alt="Gaming Laptops" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Gaming Laptops">Gaming Laptops</h3>
+                  <p class="product-offer">Min 20% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="slider-button right" onclick="scrollSlider('electronics-list', 300)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="section" id="beauty-section">
+        <div class="section-header">
+          <h2 class="section-title">Beauty, Food, Toys & more</h2>
+        </div>
+        <div class="product-slider">
+          <button class="slider-button left" onclick="scrollSlider('beauty-list', -300)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 26" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="product-list" id="beauty-list">
+            <div class="product-card">
+              <a href="/productdetailpage/p7" class="product-link">
+                <img src="https://picsum.photos/seed/coffee1/200/200" alt="Coffee Powder" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name">Coffee Powder</h3>
+                  <p class="product-offer">Upto 80% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+                <a href="/productdetailpage/p8" class="product-link">
+                  <img src="https://picsum.photos/seed/cycle1/200/200" alt="Geared Cycles" class="product-img">
+                  <div class="product-info">
+                    <h3 class="product-name" title="Geared Cycles">Geared Cycles</h3>
+                    <p class="product-offer">Upto 70% Off</p>
+                    <p class="product-bestseller">Bestseller</p>
+                  </div>
+                </a>
+              </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p9" class="product-link">
+                <img src="https://picsum.photos/seed/rctoy1/200" alt="Remote Control Toys" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Remote Control Toys">Remote Control Toys</h3>
+                  <p class="product-offer">Upto 80% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p10" class="product-link">
+                <img src="https://picsum.photos/seed/softtoy1/200" alt="Soft Toys" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Soft Toys">Soft Toys</h3>
+                  <p class="product-offer">Upto 70% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div>
+            <div class="product-card">
+              <a href="/productdetailpage/p11" class="product-link">
+                <img src="https://picsum.photos/seed/actiontoy1/200/200" alt="Best of Action Toys" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Best of Action Toys">Best of Action Toys</h3>
+                  <p class="product-offer">Upto 70% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p12" class="product-link">
+                <img src="https://picsum.photos/seed/ecycle1/200/200" alt="Electric Cycle" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Electric Cycle">Electric Cycle</h3>
+                  <p class="product-offer">Upto 40% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="slider-button right" onclick="scrollSlider('beauty-list', 300)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5 7.5 12l-7.5 7.5"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="section" id="sports-section">
+        <div class="section-header">
+          <h2 class="section-title">Sports, Healthcare & more</h2>
+        </div>
+        <div class="product-slider">
+          <button class="slider-button left" onclick="scrollSlider('sports-list', -300)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="product-list" id="sports-list">
+            <div class="product-card">
+              <a href="/productdetailpage/p13" class="product-link">
+                <img src="https://picsum.photos/seed/dryfruit1/200/200" alt="Dry Fruits" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Dry Fruits">Dry Fruits</h3>
+                  <p class="product-offer">Upto 75% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p14" class="product-link">
+                <img src="https://picsum.photos/seed/tread1/200/200" alt="Treadmill, Exercise Bike" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Treadmill, Exercise Bike">Treadmill, Exercise...</h3>
+                  <p class="product-offer">Up to 70% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p15" class="product-link">
+                <img src="https://picsum.photos/seed/ngcycle1/200/200" alt="Non-Geared Cycles" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Non-Geared Cycles">Non-Geared Cycles</h3>
+                  <p class="product-offer">Up to 40% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p16" class="product-link">
+                <img src="https://picsum.photos/seed/spread1/200/200" alt="Food Spreads" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Food Spreads">Food Spreads</h3>
+                  <p class="product-offer">Upto 75% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p17" class="product-link">
+                <img src="https://picsum.photos/seed/puzzle1/200/200" alt="Puzzles & Cubes" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Puzzles & Cubes">Puzzles & Cubes</h3>
+                  <p class="product-offer">From ₹79</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/productdetailpage/p18" class="product-link">
+                <img src="https://picsum.photos/seed/learn1/200/200" alt="Learning & Educational Toys" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Learning & Educational Toys">Learning & Education...</h3>
+                  <p class="product-offer">Up to 80% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="slider-button right" onclick="scrollSlider('sports-list', 300)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="section" id="deals-section">
+        <div class="section-header">
+          <h2 class="section-title">Deals You Can't Miss</h2>
+        </div>
+        <div class="product-slider">
+          <button class="slider-button left" onclick="scrollSlider('deals-list', -300)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="product-list" id="deals-list">
+            <div class="product-card">
+              <a href="./product-detailpage.html" class="product-link">
+                <img src="https://picsum.photos/seed/bp1/200/200" alt="Backpacks" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Backpacks">Backpacks</h3>
+                  <p class="product-offer">Min. 70% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="./product-detailpage.html" class="product-link">
+                <img src="https://picsum.photos/seed/tshirt1/200/200" alt="Men's T-shirts" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Men's T-shirts">Men's T-shirts</h3>
+                  <p class="product-offer">Min. 50% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="./product-detailpage.html" class="product-link">
+                <img src="https://picsum.photos/seed/speaker1/200/200" alt="Smart Speakers" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Smart Speakers">Smart Speakers</h3>
+                  <p class="product-offer">Best Deals</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <div href="/product-detailpage.html" class="product-link">
+                <img src="https://picsum.photos/seed/headph1/200/200" alt="Wireless Headphones" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Wireless Headphones">Wireless Headphones</h3>
+                  <p class="product-offer">Min. 50% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/product-detailpage.html" class="product-link">
+                <img src="https://picsum.photos/seed/shoerack1/200/200" alt="Shoe Rack" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Shoe Rack">Shoe Rack</h3>
+                  <p class="product-offer">Min. 50% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+            <div class="product-card">
+              <a href="/product-detailpage.html" class="product-link">
+                <img src="https://picsum.photos/seed/pillow1/200/200" alt="Pillows" class="product-img">
+                <div class="product-info">
+                  <h3 class="product-name" title="Pillows">Pillows</h3>
+                  <p class="product-offer">Min. 50% Off</p>
+                  <p class="product-bestseller">Bestseller</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <button class="slider-button right" onclick="scrollSlider('deals-list', 300)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section-title">Fashion's Top Deals</h2>
+        <div class="fashion-grid">
+          <div class="product-card">
+            <a href="/product-detailpage.html" class="product-link">
+              <img src="https://picsum.photos/seed/tw1/200/200" alt="Best Truewireless Headphones" class="product-img">
+              <div class="product-info">
+                <h3 class="product-name" title="Best Truewireless Headphones">Best Truewireless Headphones</h3>
+                <p class="product-offer">Grab Now</p>
+                <p class="product-bestseller">Bestseller</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="./product-detailpage.html" class="product-link">
+              <img src="https://picsum.photos/seed/ms1/200/200" alt="Best Selling Mobile Speakers" class="product-img">
+              <div class="product-info">
+                <h3 class="product-name" title="Best Selling Mobile Speakers">Best Selling Mobile Speakers</h3>
+                <p class="product-offer">From ₹499*</p>
+                <p class="product-bestseller">Bestseller</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="./product-detailpage.html" class="product-link">
+              <img src="https://picsum.photos/seed/mon1/200/200" alt="ASUS Monitors" class="product-img">
+              <div class="product-info">
+                <h3 class="product-name" title="ASUS Monitors">ASUS Monitors</h3>
+                <p class="product-offer">From ₹14999</p>
+                <p class="product-bestseller">Bestseller</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="./product-detailpage.html" class="product-link">
+              <img src="https://picsum.photos/seed/sw1/200/200" alt="Noise Smartwatches" class="product-img">
+              <div class="product-info">
+                <h3 class="product-name" title="Noise Smartwatches">Noise Smartwatches</h3>
+                <p class="product-offer">From ₹1,099</p>
+                <p class="product-bestseller">Bestseller</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="./product-detailpage.html" class="product-link">
+              <img src="https://picsum.photos/seed/proj1/200/200" alt="Projector" class="product-img">
+              <div class="product-info">
+                <h3 class="product-name" title="Projector">Projector</h3>
+                <p class="product-offer">From ₹6990</p>
+                <p class="product-bestseller">Bestseller</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="/product-detailpage.html" class="product-link">
+              <img src="https://picsum.photos/seed/lap1/200/200" alt="Gaming Laptops" class="product-img">
+              <div class="product-info">
+                <h3 class="product-name" title="Gaming Laptops">Gaming Laptops</h3>
+                <p class="product-offer">Min 20% Off</p>
+                <p class="product-bestseller">Bestseller</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h5>ABOUT</h5>
+          <ul>
+            <li><a href="#/about/contact">Contact Us</a></li>
+            <li><a href="#/about/us">About Us</a></li>
+            <li><a href="#/about/careers">Careers</a></li>
+            <li><a href="#/about/stories">Flipkart Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>HELP</h5>
+          <ul>
+            <li><a href="#/help/payments">Payments</a></li>
+            <li><a href="#/help/shipping">Shipping</a></li>
+            <li><a href="#/help/faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>POLICY</h5>
+          <ul>
+            <li><a href="#/policy/return">Return Policy</a></li>
+            <li><a href="#/policy/terms">Terms Of Use</a></li>
+            <li><a href="#/policy/security">Security</a></li>
+            <li><a href="#/policy/privacy">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>SOCIAL</h5>
+          <ul>
+            <li><a href="#/social/facebook">Facebook</a></li>
+            <li><a href="#/social/twitter">Twitter</a></li>
+            <li><a href="#/social/youtube">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 White Spot. All rights reserved.</p>
+        <p>This is a conceptual UI clone for demonstration purposes.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js">
+   
+  </script>
+</body>
+</html>
